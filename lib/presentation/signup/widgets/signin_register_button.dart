@@ -3,14 +3,15 @@ import 'package:flutter/material.dart';
 class SignInRegisterButton extends StatelessWidget {
   final String buttonText;
   final Function callback;
-  const SignInRegisterButton({Key? key, required this.buttonText, required this.callback})
+  const SignInRegisterButton(
+      {Key? key, required this.buttonText, required this.callback})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
     return InkResponse(
-      onTap: () => callback,
+      onTap: ()  => callback(),
       child: Container(
         height: 40,
         width: double.infinity,
